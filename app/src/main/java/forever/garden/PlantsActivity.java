@@ -50,9 +50,10 @@ public class PlantsActivity extends AppCompatActivity implements PlantsAdapter.P
     }
 
     @Override
-    public void onItemClicked(Plant plant) {
+    public void onItemClicked(Plant plant,int pos) {
         Intent intent = new Intent(PlantsActivity.this, DetailsActivity.class);
         intent.putExtra("plant", new Gson().toJson(plant));
+        intent.putExtra("pos", pos);
         startActivity(intent);
     }
 }

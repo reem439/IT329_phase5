@@ -9,10 +9,11 @@ public class Plant {
     String amendments;
     String watering;
     boolean favorite;
+    float rating;
 
     public Plant(int id, String name, String description,
                  String soil, String amendments, String watering,
-                 boolean favorite) {
+                 boolean favorite, float rating) {
         this.id = id;
         this.name = name;
         this.description = description;
@@ -20,6 +21,7 @@ public class Plant {
         this.amendments = amendments;
         this.watering = watering;
         this.favorite = favorite;
+        this.rating = rating;
     }
 
     public int getId() {
@@ -76,6 +78,14 @@ public class Plant {
 
     public void setFavorite(boolean favorite) {
         this.favorite = favorite;
+    }
+
+    public float getRating() {
+        return rating;
+    }
+
+    public void setRating(float rating) {
+        this.rating = rating;
     }
 
     @Override

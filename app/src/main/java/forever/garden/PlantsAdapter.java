@@ -77,7 +77,7 @@ public class PlantsAdapter extends RecyclerView.Adapter<PlantsAdapter.ViewHolder
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                plantClick.onItemClicked(plant);
+                plantClick.onItemClicked(plant,position);
             }
         });
 
@@ -93,7 +93,7 @@ public class PlantsAdapter extends RecyclerView.Adapter<PlantsAdapter.ViewHolder
     interface PlantClick {
         void onFavClicked(Plant plant, int pos);
 
-        void onItemClicked(Plant plant);
+        void onItemClicked(Plant plant,int pos);
     }
 }
 

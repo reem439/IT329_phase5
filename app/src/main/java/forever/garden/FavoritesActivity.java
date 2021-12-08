@@ -48,9 +48,10 @@ public class FavoritesActivity extends AppCompatActivity implements PlantsAdapte
     }
 
     @Override
-    public void onItemClicked(Plant plant) {
+    public void onItemClicked(Plant plant,int pos) {
         Intent intent = new Intent(FavoritesActivity.this, DetailsActivity.class);
         intent.putExtra("plant", new Gson().toJson(plant));
+        intent.putExtra("pos", pos);
         startActivity(intent);
     }
 }
